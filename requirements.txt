@@ -1,0 +1,11 @@
+fire
+igraph
+matplotlib
+networkx
+numpy
+pandas
+pyyaml
+scikit-learn
+scipy
+seaborn
+tqdm

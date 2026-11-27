@@ -1,0 +1,23 @@
+# Sweep ranges for qRSE / MiSE-size measurement (run_mise, mise.py).
+#
+# qRSE enumerates the whole class of minimal sufficient extensions, so its
+# running time blows up combinatorially with block_size/relevant_size. We
+# therefore keep a narrower, known-safe range here, separate from the full
+# sweep used for the dataRSE accuracy experiments (datarse_sweeps.yaml) --
+# e.g. block_size=15 or relevant_size=5 there are fine for dataRSE (which
+# only explores parametrically consistent solutions) but are not included
+# here. n_samples is omitted entirely: qRSE is purely combinatorial and does
+# not use low-level data.
+block_size:
+    - 4
+    - 6
+    - 8
+    - 10
+relevant_size:
+    - 2
+    - 3
+    - 4
+edge_ratio:
+    - 0.5
+output_ratio:
+    - 0.2

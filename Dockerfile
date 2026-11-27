@@ -1,0 +1,8 @@
+FROM python:3.12-slim
+
+WORKDIR /rse
+COPY requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt
+COPY . .
+
+CMD ["./run_all.sh", "quick"]
